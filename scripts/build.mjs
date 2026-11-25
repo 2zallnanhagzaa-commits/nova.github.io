@@ -71,8 +71,10 @@ const home = `<section class="hero">
   <figure class="hero-art">
     <div class="orbit orbit-outer"></div><div class="orbit orbit-inner"></div>
     <div class="star star-one">${icon('spark')}</div><div class="star star-two">${icon('spark')}</div>
-    <img class="chat-preview" src="./assets/chat-preview-sidebar.webp" width="2048" height="1007" alt="NOVA 사이드바와 채팅 예시 채널의 인사 및 환영 메시지">
-    <figcaption>대화 화면 예시</figcaption>
+    <a class="preview-link" href="./assets/chat-preview-sidebar.webp" aria-label="채팅 예시 원본 이미지 열기">
+      <img class="chat-preview" src="./assets/chat-preview-sidebar.webp" width="2048" height="1007" alt="NOVA 사이드바와 채팅 예시 채널의 인사 및 환영 메시지">
+    </a>
+    <figcaption>이미지를 눌러 크게 보기</figcaption>
   </figure>
 </section>
 <section class="home-features" aria-labelledby="features-title"><p class="eyebrow">FEATURES</p><h2 id="features-title">NOVA 주요 기능</h2>${featureCards}</section>`;
