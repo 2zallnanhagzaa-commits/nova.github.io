@@ -56,8 +56,8 @@ p, li { color: var(--subtle); }
 .top { background: var(--surface); border-bottom: 1px solid var(--line); }
 .top-inner { display: flex; align-items: center; gap: 1.75rem; min-height: 4.6rem; }
 .brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 850; font-size: 1.25rem; letter-spacing: .035em; text-decoration: none; }
-.brand-icon, .mini-mark, .tile-icon { display: inline-grid; place-items: center; }
-.brand-icon { width: 2rem; height: 2rem; border-radius: .6rem; background: var(--brand); color: #111837; }
+.mini-mark, .tile-icon { display: inline-grid; place-items: center; }
+.brand-icon { display: block; width: 2.25rem; height: 2.25rem; flex: none; border-radius: .55rem; }
 .top nav { display: flex; justify-content: center; align-items: center; gap: .2rem; flex: 1; }
 .top nav a { font-size: .875rem; font-weight: 650; padding: .55rem .75rem; border-radius: .5rem; text-decoration: none; white-space: nowrap; color: var(--subtle); }
 .top nav a:hover, .top nav a[aria-current] { color: var(--accent); background: var(--tint); }

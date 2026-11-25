@@ -21,7 +21,7 @@ const icons = {
   pulse: '<path d="M2 12h5l3-7 4 14 3-7h5"/>'
 };
 const icon = (name) => `<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${icons[name]}</svg>`;
-const brand = `<span class="brand-icon">${icon('spark')}</span> NOVA`;
+const brand = (prefix) => `<img class="brand-icon" src="${prefix}assets/nova-logo.png" alt="" width="36" height="36"> NOVA`;
 const start = `<a class="button primary" href="${web}">${icon('globe')} 웹에서 NOVA 시작하기</a>`;
 const nav = [['features','주요 기능'],['download','다운로드'],['updates','업데이트'],['story','개발 스토리'],['guide','가이드'],['status','서비스 상태']];
 const intro = (en, title, text) => `<header class="page-intro"><p class="eyebrow">${en}</p><h1>${title}</h1><p>${text}</p></header>`;
@@ -42,7 +42,7 @@ function layout(key, title, description, body, prefix) {
   <meta name="description" content="${escape(description)}">
   <meta name="theme-color" content="#6478FF">
   <title>${title}</title>
-  <link rel="icon" href="${prefix}assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="${prefix}assets/nova-logo.png" type="image/png">
   <script src="${prefix}assets/theme.js"></script>
   <link rel="stylesheet" href="${prefix}assets/site.css">
   <script defer src="${prefix}assets/site.js"></script>
@@ -50,12 +50,12 @@ function layout(key, title, description, body, prefix) {
 <body>
   <a class="skip" href="#main">본문으로 건너뛰기</a>
   <header class="top"><div class="shell top-inner">
-    <a class="brand" href="${prefix}">${brand}</a>
+    <a class="brand" href="${prefix}">${brand(prefix)}</a>
     <nav aria-label="주 메뉴">${nav.map(([slug, label]) => `<a href="${prefix}${slug}/"${key === slug ? ' aria-current="page"' : ''}>${label}</a>`).join('')}</nav>
     <button hidden type="button" id="theme" class="theme" aria-label="다크 모드" title="다크 모드">${icon('theme')}</button>
   </div></header>
   <main id="main" class="shell">${body}</main>
-  <footer class="footer"><div class="shell footer-inner"><a class="brand" href="${prefix}">${brand}</a><span>간단하게, 깔끔하게, 확실하게.</span><a href="${web}">novachat.cyou</a></div></footer>
+  <footer class="footer"><div class="shell footer-inner"><a class="brand" href="${prefix}">${brand(prefix)}</a><span>간단하게, 깔끔하게, 확실하게.</span><a href="${web}">novachat.cyou</a></div></footer>
 </body>
 </html>`;
 }

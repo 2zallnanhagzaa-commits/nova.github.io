@@ -8,7 +8,7 @@ const { values } = parseArgs({ options: {
   strictPort: { type: 'boolean' }
 } });
 
-const types = { html: 'text/html', css: 'text/css', js: 'text/javascript', svg: 'image/svg+xml' };
+const types = { html: 'text/html', css: 'text/css', js: 'text/javascript', svg: 'image/svg+xml', png: 'image/png' };
 const pages = new URL('../dist/', import.meta.url);
 createServer(async (request, response) => {
   const path = new URL(request.url, 'http://localhost').pathname;
@@ -17,7 +17,8 @@ createServer(async (request, response) => {
   try {
     if (!file.href.startsWith(pages.href)) throw new Error('Not found');
     const content = await readFile(file);
-    response.writeHead(200, { 'Content-Type': `${types[file.pathname.split('.').at(-1)] ?? 'text/plain'}; charset=utf-8` });
+    const type = types[file.pathname.split('.').at(-1)] ?? 'text/plain';
+    response.writeHead(200, { 'Content-Type': type.startsWith('image/') ? type : `${type}; charset=utf-8` });
     response.end(content);
   } catch {
     response.writeHead(404).end('Not found');
