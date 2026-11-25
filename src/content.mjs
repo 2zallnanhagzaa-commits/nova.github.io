@@ -9,4 +9,4 @@ export const downloads = [
 export const updates = [];
 
 // 운영팀이 확인한 상태만 기록합니다. state는 operational, degraded, maintenance 중 하나입니다.
-export const status = { state: null, checkedAt: null, message: '' };
+export const status = { state: 'operational', checkedAt: '2026-11-25', message: '' };
