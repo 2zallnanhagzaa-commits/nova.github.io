@@ -11,7 +11,6 @@ const escape = (value) => String(value).replace(/[&<>"']/g, (char) => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
 })[char]);
 const icons = {
-  spark: '<path d="M12 1.5c1.3 6.3 4.2 9.2 10.5 10.5-6.3 1.3-9.2 4.2-10.5 10.5C10.7 16.2 7.8 13.3 1.5 12 7.8 10.7 10.7 7.8 12 1.5Z" fill="currentColor" stroke="none"/>',
   globe: '<circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/>',
   chat: '<path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H5l1.6-3.4A7.5 7.5 0 1 1 20 11.5Z"/><path d="M9 12h6"/>',
   screen: '<rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/>',
@@ -63,14 +62,13 @@ function layout(key, title, description, body, prefix) {
 
 const home = `<section class="hero">
   <div class="hero-copy">
-    <p class="eyebrow"><span class="mini-mark">${icon('spark')}</span> NOVA CHAT</p>
+    <p class="eyebrow">NOVA CHAT</p>
     <h1>대화를 더<br><em>간단하게.</em></h1>
     <p>브라우저에서 바로 시작하는 채팅 서비스, NOVA.</p>
     <div class="actions">${start}<a class="button secondary" href="./download/">${icon('download')} 다운로드</a></div>
   </div>
   <figure class="hero-art">
     <div class="orbit orbit-outer"></div><div class="orbit orbit-inner"></div>
-    <div class="star star-one">${icon('spark')}</div><div class="star star-two">${icon('spark')}</div>
     <a class="preview-link" href="./assets/chat-preview-sidebar.webp" aria-label="채팅 예시 원본 이미지 열기">
       <img class="chat-preview" src="./assets/chat-preview-sidebar.webp" width="2048" height="1007" alt="NOVA 사이드바와 채팅 예시 채널의 인사 및 환영 메시지">
     </a>

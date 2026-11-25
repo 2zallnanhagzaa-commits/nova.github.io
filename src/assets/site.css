@@ -56,7 +56,7 @@ p, li { color: var(--subtle); }
 .top { background: var(--surface); border-bottom: 1px solid var(--line); }
 .top-inner { display: flex; align-items: center; gap: 1.75rem; min-height: 4.6rem; }
 .brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 850; font-size: 1.25rem; letter-spacing: .035em; text-decoration: none; }
-.mini-mark, .tile-icon { display: inline-grid; place-items: center; }
+.tile-icon { display: inline-grid; place-items: center; }
 .brand-icon { display: block; width: 2.25rem; height: 2.25rem; flex: none; border-radius: .55rem; }
 .top nav { display: flex; justify-content: center; align-items: center; gap: .2rem; flex: 1; }
 .top nav a { font-size: .875rem; font-weight: 650; padding: .55rem .75rem; border-radius: .5rem; text-decoration: none; white-space: nowrap; color: var(--subtle); }
@@ -66,7 +66,6 @@ p, li { color: var(--subtle); }
 .theme:hover, .theme[aria-pressed=true] { color: var(--accent); background: var(--tint); }
 .hero { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); align-items: center; gap: 3rem; padding-block: 4rem; }
 .eyebrow { display: flex; align-items: center; gap: .45rem; color: var(--accent); font-size: .875rem; font-weight: 800; letter-spacing: .15em; }
-.mini-mark svg { width: 1rem; height: 1rem; }
 .hero h1 { font-size: clamp(3.5rem, 6.4vw, 6.2rem); font-weight: 850; line-height: 1.06; margin-block: .9rem 1.3rem; }
 .hero h1 em { color: var(--accent); font-style: normal; }
 .hero-copy > p:not(.eyebrow) { font-size: 1.125rem; }
@@ -79,10 +78,6 @@ p, li { color: var(--subtle); }
 .hero-art { position: relative; isolation: isolate; min-height: 26rem; display: grid; grid-template-columns: minmax(0, 1fr); place-items: center; overflow: hidden; border: 1px solid var(--line); border-radius: 1.6rem; padding: 1.1rem 1.1rem 2.5rem; background: radial-gradient(ellipse at 70% 48%, var(--glow), transparent 80%), var(--tint); }
 .orbit { position: absolute; z-index: -1; width: 74%; aspect-ratio: 1; border: 1px solid color-mix(in srgb, var(--brand) 33%, transparent); border-radius: 50%; }
 .orbit-outer { width: 98%; }
-.star { position: absolute; color: var(--brand); }
-.star-one { top: 13%; right: 8%; }
-.star-one svg { width: 2rem; height: 2rem; }
-.star-two { bottom: 13%; left: 8%; }
 .preview-link { display: block; width: 100%; min-width: 0; border-radius: .85rem; cursor: zoom-in; }
 .chat-preview { display: block; width: 100%; min-width: 0; height: auto; border: 1px solid var(--line); border-radius: .85rem; box-shadow: 0 1.3rem 3.5rem #232a7940; }
 .tile-icon { background: var(--tint); color: var(--accent); border-radius: .7rem; }
