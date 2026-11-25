@@ -103,7 +103,7 @@ p, li { color: var(--subtle); }
 .home-features { border-top: 1px solid var(--line); padding-top: 2.3rem; }
 .home-features h2, .story h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); margin: .5rem 0 1.35rem; }
 .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
-.platforms { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.platforms { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .card, .panel { border: 1px solid var(--line); border-radius: 1rem; padding: 1.5rem; background: var(--surface); }
 .card h2, .card h3, .panel h2 { font-size: 1.25rem; }
 .card p, .panel p { margin-top: .5rem; }
@@ -135,7 +135,6 @@ p, li { color: var(--subtle); }
   .top-inner { flex-wrap: wrap; gap: 0; padding-top: .65rem; justify-content: space-between; }
   .top nav { order: 3; flex: 0 0 100%; flex-wrap: wrap; justify-content: flex-start; padding-block: .4rem; }
   .hero { gap: 1.6rem; }
-  .platforms { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 43rem) {
   .shell { width: calc(100% - 2rem); }

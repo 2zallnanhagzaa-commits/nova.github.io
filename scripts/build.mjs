@@ -15,9 +15,7 @@ const icons = {
   download: '<path d="M12 3v12m-4-4 4 4 4-4M5 16v4h14v-4"/>',
   theme: '<path d="M20.5 15A8.8 8.8 0 0 1 9 3.5 9 9 0 1 0 20.5 15Z"/>',
   windows: '<path d="M3 5l8-1v7H3zm10-1 8-1v8h-8zM3 13h8v7l-8-1zm10 0h8v8l-8-1z" fill="currentColor" stroke="none"/>',
-  android: '<path d="m7 7-2-3m12 3 2-3M3 17a9 9 0 0 1 18 0v2H3zm5-3h.1m7.9 0h.1"/>',
   apple: '<path d="M15 7c-1.2 0-2.1.7-3 .7S10.2 7 9 7c-2.7 0-4.5 2.2-4.5 5 0 4 2.7 8 4.8 8 1 0 1.6-.6 2.7-.6s1.7.6 2.7.6c1.6 0 3.5-2.4 4.3-5a4.4 4.4 0 0 1-.7-7A4.4 4.4 0 0 0 15 7zm-3-1c0-2 1.5-3.5 3.5-4 0 2-1.5 3.5-3.5 4Z"/>',
-  phone: '<rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18h2"/>',
   pulse: '<path d="M2 12h5l3-7 4 14 3-7h5"/>'
 };
 const icon = (name) => `<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${icons[name]}</svg>`;
@@ -29,7 +27,7 @@ const card = (glyph, title, description) => `<article class="card"><span class="
 const features = [
   ['chat', '웹 채팅', 'NOVA 웹 서비스에서 대화를 시작할 수 있습니다.'],
   ['globe', '브라우저에서 바로', 'PC, 모바일, 크롬북에서 브라우저로 NOVA에 접속하세요.'],
-  ['download', '플랫폼별 다운로드', 'Windows, Android, macOS, iOS 앱의 배포 여부를 확인하세요.']
+  ['download', '플랫폼별 다운로드', 'Windows와 macOS 앱의 배포 여부를 확인하세요.']
 ];
 const featureCards = `<div class="cards">${features.map((item) => card(...item)).join('')}</div>`;
 
