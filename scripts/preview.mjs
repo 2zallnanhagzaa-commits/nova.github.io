@@ -8,7 +8,7 @@ const { values } = parseArgs({ options: {
   strictPort: { type: 'boolean' }
 } });
 
-const types = { html: 'text/html', css: 'text/css', js: 'text/javascript', svg: 'image/svg+xml', png: 'image/png' };
+const types = { html: 'text/html', css: 'text/css', js: 'text/javascript', svg: 'image/svg+xml', png: 'image/png', webp: 'image/webp' };
 const pages = new URL('../dist/', import.meta.url);
 createServer(async (request, response) => {
   const path = new URL(request.url, 'http://localhost').pathname;

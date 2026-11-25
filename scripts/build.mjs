@@ -68,18 +68,7 @@ const home = `<section class="hero">
   <figure class="hero-art">
     <div class="orbit orbit-outer"></div><div class="orbit orbit-inner"></div>
     <div class="star star-one">${icon('spark')}</div><div class="star star-two">${icon('spark')}</div>
-    <div class="mock">
-      <div class="mock-toolbar"><span></span><span></span><span></span><b>novachat.cyou</b></div>
-      <div class="mock-content">
-        <div class="mock-rail">${icon('spark')}<span></span><span></span><span></span></div>
-        <div class="mock-room">
-          <div class="room-title"><span class="room-avatar">${icon('chat')}</span><div><strong>NOVA</strong><small>대화 예시</small></div></div>
-          <div class="bubble received">안녕하세요! NOVA에 오신 걸 환영해요.</div>
-          <div class="bubble sent">안녕하세요! 반가워요 👋</div>
-          <div class="mock-input">메시지 입력</div>
-        </div>
-      </div>
-    </div>
+    <img class="chat-preview" src="./assets/chat-preview.webp" width="1715" height="815" alt="NOVA 채팅 예시 채널에 인사와 환영 메시지가 표시된 화면">
     <figcaption>대화 화면 예시</figcaption>
   </figure>
 </section>
