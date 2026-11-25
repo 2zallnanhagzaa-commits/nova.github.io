@@ -76,14 +76,14 @@ p, li { color: var(--subtle); }
 .button:hover { text-decoration: underline; text-underline-offset: .22em; }
 .primary { background: var(--button); color: var(--button-ink); }
 .secondary { background: var(--surface); border-color: var(--line); }
-.hero-art { position: relative; isolation: isolate; min-height: 26rem; display: grid; place-items: center; overflow: hidden; border: 1px solid var(--line); border-radius: 1.6rem; padding: 2rem; background: radial-gradient(ellipse at 70% 48%, var(--glow), transparent 80%), var(--tint); }
+.hero-art { position: relative; isolation: isolate; min-height: 26rem; display: grid; grid-template-columns: minmax(0, 1fr); place-items: center; overflow: hidden; border: 1px solid var(--line); border-radius: 1.6rem; padding: 2rem; background: radial-gradient(ellipse at 70% 48%, var(--glow), transparent 80%), var(--tint); }
 .orbit { position: absolute; z-index: -1; width: 74%; aspect-ratio: 1; border: 1px solid color-mix(in srgb, var(--brand) 33%, transparent); border-radius: 50%; }
 .orbit-outer { width: 98%; }
 .star { position: absolute; color: var(--brand); }
 .star-one { top: 13%; right: 8%; }
 .star-one svg { width: 2rem; height: 2rem; }
 .star-two { bottom: 13%; left: 8%; }
-.chat-preview { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: .85rem; box-shadow: 0 1.3rem 3.5rem #232a7940; }
+.chat-preview { display: block; width: 100%; min-width: 0; height: auto; border: 1px solid var(--line); border-radius: .85rem; box-shadow: 0 1.3rem 3.5rem #232a7940; }
 .tile-icon { background: var(--tint); color: var(--accent); border-radius: .7rem; }
 .hero-art figcaption { position: absolute; bottom: .65rem; right: 1.15rem; color: var(--subtle); font-size: .8rem; }
 .home-features { border-top: 1px solid var(--line); padding-top: 2.3rem; }

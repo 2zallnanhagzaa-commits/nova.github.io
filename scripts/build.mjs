@@ -1,9 +1,12 @@
-import { cp, mkdir, rename, rm, writeFile } from 'node:fs/promises';
+import { cp, mkdir, readFile, rename, rm, writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { downloads, status, updates, web } from '../src/content.mjs';
 
 const root = new URL('../', import.meta.url);
 const staging = new URL('.dist-build/', root);
 const dist = new URL('dist/', root);
+const stylesheet = await readFile(new URL('src/assets/site.css', root));
+const styleVersion = createHash('sha256').update(stylesheet).digest('hex').slice(0, 12);
 const escape = (value) => String(value).replace(/[&<>"']/g, (char) => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
 })[char]);
@@ -42,7 +45,7 @@ function layout(key, title, description, body, prefix) {
   <title>${title}</title>
   <link rel="icon" href="${prefix}assets/nova-logo.png" type="image/png">
   <script src="${prefix}assets/theme.js"></script>
-  <link rel="stylesheet" href="${prefix}assets/site.css">
+  <link rel="stylesheet" href="${prefix}assets/site.css?v=${styleVersion}">
   <script defer src="${prefix}assets/site.js"></script>
 </head>
 <body>
