@@ -1,0 +1,1 @@
+{"name":"nova-website","version":"1.0.0","private":true,"type":"module","engines":{"node":">=22"},"scripts":{"build":"node scripts/build.mjs","test":"node --test scripts/site.test.mjs","dev":"npm run build && node scripts/preview.mjs"}}
